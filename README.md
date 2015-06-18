@@ -18,7 +18,7 @@ The two-column templates is inspired by the design of my personal webpage: [http
 
 ## License
 
-Both templates are licensed as follows (as noted above this does not include the content, that is all personal information has to be removed!):
+Both templates are licensed as follows. **As noted above this does not include the content, that is all personal information has to be removed!**
 
 Copyright (c) 2014 - 2015, David Stutz. All rights reserved.
 
