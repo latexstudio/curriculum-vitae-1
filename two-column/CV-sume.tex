@@ -1,0 +1,166 @@
+\documentclass[10pt,a4paper]{article}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{xparse}
+
+\newsavebox{\fminipagebox}
+\NewDocumentEnvironment{fminipage}{m O{\fboxsep}}
+ {\par\kern#2\noindent\begin{lrbox}{\fminipagebox}
+  \begin{minipage}{#1}\ignorespaces}
+ {\end{minipage}\end{lrbox}%
+  \makebox[#1]{%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+    \fbox{\usebox{\fminipagebox}}%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+  }\par\kern#2
+ }
+
+\usepackage[utf8]{inputenc}
+\usepackage[
+	top=0.5cm,
+	bottom=1cm,
+	left=1cm,
+	right=1cm,
+]{geometry}
+
+\begin{document}
+	\pagenumbering{gobble}
+	\clearpage
+
+	\begin{center}
+		{\scriptsize Meant to be viewed on screen or printed on DIN A4 paper.}
+	\end{center}
+	\vspace{-6px}
+	\noindent\fbox{
+		\begin{minipage}[t]{0.38\textwidth}
+			\vspace{2px}
+			{\huge I AM} {\small OPENSOURCE FAN}\\[2px]
+			{STUDYING COMPUTER SCIENCE} {\scriptsize AND MATH}\\[5px]
+			{\Huge DAVID STUTZ}\\[2px]
+			{RWTH STUDENT} {\scriptsize AND} {\small GEORGIA TECH ALUMNI}\\[2px]
+			{COMPUTER VISION} {\small RESEARCH SCIENTIST}\\[2px]
+			{\footnotesize WEB DEVELOPER}{\scriptsize, VIDEOGAME ENTHUSIAST, GUITARIST}
+			\vspace{2px}
+		\end{minipage}
+	}
+	\hspace{0.025\textwidth}
+	\begin{minipage}[t]{0.325\textwidth}
+		\vspace{2px}
+		{\LARGE CURRENTLY}\\[6px]
+		RWTH Aachen University\\
+		M.Sc. in Computer Science\\
+		\hphantom{a}\hfill{\scriptsize 10/2011 -- today, Aachen, GER}
+		\vskip 4px
+		RWTH Aachen University\\
+		Student Research Assistant\\
+		\hphantom{a}\hfill{\scriptsize 05/2015 -- today, Aachen, GER}
+	\end{minipage}
+	\hspace{0.025\textwidth}
+	\begin{minipage}[t]{0.175\textwidth}
+		\vspace{2px}
+		{\LARGE CONTACT}\\[6px]
+		Försterstraße 16\\
+		52072 Aachen\\
+		davidstutz@web.de
+		\vskip 4px
+		\href{http://davidstutz.de}{davidstutz.de}\\
+		\href{https://github.com/davidstutz}{github.com/davidstutz}\\
+		\href{https://twitter.com/david_stutz}{twitter.com/david\_stutz}
+	\end{minipage}
+	\vskip 8px
+	\noindent\fbox{
+		\begin{minipage}{1\textwidth}
+			\vspace{2px}
+			I am passionate about computer science -- its versability, its origins in mathematics, its applications. Focusing on computer vision and machine learning, I combine the depth of theory with the most interesting applications of todays world.
+			\vspace{2px}
+		\end{minipage}
+	}
+	\vskip 12px
+	\noindent\begin{minipage}[t]{0.575\textwidth}
+		\noindent{\LARGE EDUCATION}\\[6px]
+		RWTH Aachen University\\
+		M.Sc. in Computer Science (expected 2016, 4.0 GPA)\\
+		B.Sc. in Computer Science (with distinction, 4.0 GPA)\\
+		{\small \textit{Minor: Mathematics}}\\
+		{\small \textit{Thesis: Superpixel Segmentation using Depth Information.${}^\ast$}}\\
+		{\small \textit{Advisor: Prof. Dr. Bastian Leibe}}\\
+		\hphantom{a}\hfill{\scriptsize 10/2011 -- today, Aachen, GER}
+		\vskip 4px
+		\noindent Georgia Institute of Technology\\
+		Graduate Exchange Student (4.0 GPA)\\
+		\hphantom{a}\hfill{\scriptsize 01/2015 -- 05/2015, Atlanta, GA}
+		\vskip 12px
+		
+		\noindent{\LARGE EXPERIENCE}\\[6px]
+		Computer Vision Group, RWTH Aachen University\\
+		Student Research Assistant, Computer Vision\\
+		{\small\textit{Evaluation and comparison of state-of-the-art superpixel algorithms.}}\\
+		{\small\textit{Advisor: Prof. Dr. Bastian Leibe}}\\
+		\hphantom{a}\hfill{\scriptsize 05/2015 -- today, Aachen, GER}
+		\vskip 4px
+		Computational Perception Laboratory, Georgia Institute of Technology\\
+		Visiting Graduate Student\\
+		{\small \textit{Video segmentation using intrinsic characteristics and semantic segmentation of weakly-labeled video.}}\\
+		{\small \textit{Advisor: Prof. Irfan Essa, Ph.D.}}\\
+		\hphantom{a}\hfill{\scriptsize 01/2015 -- 05/2015, Atlanta, GA}
+		\vskip 4px
+		MATHCCES, RWTH Aachen University\\
+		Tutor, {\small\textit{``Fundamentals in Mathematics II'', ``Calculus for Computer Science''}}\\
+		{\small\textit{Responsibilities include presenting exercises to a group of 30-50 students and grading weekly homework as well as final exams.}}\\
+		\hphantom{a}\hfill{\scriptsize 10/2013 -- 01/2014, 04/2014 -- 09/2014, Aachen, GER}
+		\vskip 4px
+		RS Computer\\
+		Web Developer\\
+		{\small\textit{Development of themes and plugins for content management systems such as CMSimple and Wordpress. Conception, Prototyping and Development of individual web applications for medium-sized companies.}}\\
+		\hphantom{a}\hfill{\scriptsize 01/2009 -- 03/2014, 10/2014 -- 04/2015, Sinzig, GER}
+		\vskip 4px
+		%Fraunhofer Institute for Communication, Information Processing and Ergonomics\\
+		Fraunhofer FKIE\\
+		Student Employee\\
+		{\small\textit{Introduction to C++ and 3D modeling using Blender; plugin development for Piwik; and data visualization using d3.js.}}\\
+		{\small\textit{Advisor: Dr. Carsten Winkelholz}}\\
+		\hphantom{a}\hfill{\scriptsize 10/2009, 05/2011 -- 07/2011, 03/2012, 08/2012 -- 09/2012, Wachtberg, GER}
+		\footnotetext{{\scriptsize ${}^\ast$ \label{footnote}Bachelor thesis, seminar papers and additional source code available at \href{https://github.com/davidstutz}{github.com/davidstutz}.}}
+		\footnotetext{{\scriptsize Documents proving the above claims are given upon request.}}
+	\end{minipage}
+	\hspace{0.025\textwidth}
+	\begin{minipage}[t]{0.38\textwidth}
+		{\LARGE AWARDS}\\[6px]
+		Hans Hermann-Voss Scholarship {\scriptsize 2015}\\
+		Germany Scholarship {\scriptsize 2014 -- today}\\
+		RWTH Aachen Dean's List {\scriptsize 2012, 2013, 2014}\\
+		% Selection Seminar of the German National Academic Foundation {\scriptsize 2013}\\
+		careerloft.de Scholarship {\scriptsize 2012 -- today}\\
+		e-fellows.net Scholarship {\scriptsize 2011 -- today}\\
+		Germany Physical Society Book Price {\scriptsize 2011}\\
+		German Junior Academy {\scriptsize  2005}
+		\vskip 8px
+		
+		\noindent{\LARGE COURSEWORK${}^\ast$}\\[6px]
+		Computer Vision, Computer Vision 2, Machine Learning, Data Mining Algorithms, Statistical Techniques in Robotics, Probabilistic Graphical Models, Numerical Analysis, Numerical Analysis 2, Complexity Theory
+		\vskip 12px
+		
+		\noindent{\LARGE MOOCS}\\[6px]
+		Linear and Integer Programming, Social Network Analysis, Game Theory, Cryptography, Introduction to Finance, Introduction to Operations Management
+		\vskip 12px
+		
+		\noindent{\LARGE PROJECTS${}^\ast$}\\[6px]
+		SEEDS Revised and Superpixels Revisited\\
+		{\small\textit{Efficient implementation of SEEDS superpixels bundled together with recent superpixel algorithms including an extended version of the Berkeley Segmentation Benchmark for evaluation.}}\\
+		\hphantom{a}\hfill{\scriptsize \href{http://davidstutz.de/projects/superpixelsseeds/}{davidstutz.de/projects/superpixelsseeds/}}\\
+		\vskip 4px
+		Bootstrap Multiselect and Strength Meter\\
+		{\small\textit{Twitter Bootstrap plugins for user-friendtly select elements and password inputs.}}\\
+		\hphantom{a}\hfill{\scriptsize \href{http://davidstutz.de/projects/twitter-bootstrap/}{davidstutz.de/projects/twitter-bootstrap/}}\\
+		\vskip 4px
+		CMSimple News, Pictures and Youtube\\
+		{\small\textit{CMSimple plugins for blogging and news articles, image galleries and sliders as well as Youtube video galleries.}}\\
+		\hphantom{a}\hfill{\scriptsize \href{http://davidstutz.de/projects/cmsimple/}{davidstutz.de/projects/cmsimple/}}\\
+		\vskip 4px
+		Kohana Red, Green, Blue, Yellow and Gaps\\
+		{\small\textit{Kohana plugins for authentication, access control and form generation and validation.}}\\
+		\hphantom{a}\hfill{\scriptsize \href{http://davidstutz.de/projects/kohana/}{davidstutz.de/projects/kohana/}}\\
+	\end{minipage}
+\end{document}
