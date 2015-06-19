@@ -5,18 +5,6 @@
 \usepackage{hyperref}
 \usepackage{xparse}
 
-\newsavebox{\fminipagebox}
-\NewDocumentEnvironment{fminipage}{m O{\fboxsep}}
- {\par\kern#2\noindent\begin{lrbox}{\fminipagebox}
-  \begin{minipage}{#1}\ignorespaces}
- {\end{minipage}\end{lrbox}%
-  \makebox[#1]{%
-    \kern\dimexpr-\fboxsep-\fboxrule\relax
-    \fbox{\usebox{\fminipagebox}}%
-    \kern\dimexpr-\fboxsep-\fboxrule\relax
-  }\par\kern#2
- }
-
 \usepackage[utf8]{inputenc}
 \usepackage[
 	top=0.5cm,
@@ -36,12 +24,12 @@
 	\noindent\fbox{
 		\begin{minipage}[t]{0.38\textwidth}
 			\vspace{2px}
-			{\huge I AM} {\small OPENSOURCE FAN}\\[2px]
+			{\huge I AM} {\small OPEN SOURCE FAN}\\[2px]
 			{STUDYING COMPUTER SCIENCE} {\scriptsize AND MATH}\\[5px]
 			{\Huge DAVID STUTZ}\\[2px]
 			{RWTH STUDENT} {\scriptsize AND} {\small GEORGIA TECH ALUMNI}\\[2px]
 			{COMPUTER VISION} {\small RESEARCH SCIENTIST}\\[2px]
-			{\footnotesize WEB DEVELOPER}{\scriptsize, VIDEOGAME ENTHUSIAST, GUITARIST}
+			{\footnotesize WEB DEVELOPER}{\scriptsize, VIDEO GAME ENTHUSIAST, GUITARIST}
 			\vspace{2px}
 		\end{minipage}
 	}
@@ -71,7 +59,7 @@
 	\noindent\fbox{
 		\begin{minipage}{1\textwidth}
 			\vspace{2px}
-			I am passionate about computer science -- its versability, its origins in mathematics, its applications. Focusing on computer vision and machine learning, I combine the depth of theory with the most interesting applications of todays world.
+			I am passionate about computer science -- its versatility, its origins in mathematics, its applications. Focusing on computer vision and machine learning, I combine the depth of theory with the most interesting applications of today's world.
 			\vspace{2px}
 		\end{minipage}
 	}
@@ -150,11 +138,11 @@
 		\hphantom{a}\hfill{\scriptsize \href{http://davidstutz.de/projects/superpixelsseeds/}{davidstutz.de/projects/superpixelsseeds/}}\\
 		\vskip 4px
 		Bootstrap Multiselect and Strength Meter\\
-		{\small\textit{Twitter Bootstrap plugins for user-friendtly select elements and password inputs.}}\\
+		{\small\textit{Twitter Bootstrap plugins for user-friendly select elements and password inputs.}}\\
 		\hphantom{a}\hfill{\scriptsize \href{http://davidstutz.de/projects/twitter-bootstrap/}{davidstutz.de/projects/twitter-bootstrap/}}\\
 		\vskip 4px
-		CMSimple News, Pictures and Youtube\\
-		{\small\textit{CMSimple plugins for blogging and news articles, image galleries and sliders as well as Youtube video galleries.}}\\
+		CMSimple News, Pictures and YouTube\\
+		{\small\textit{CMSimple plugins for blogging and news articles, image galleries and sliders as well as YouTube video galleries.}}\\
 		\hphantom{a}\hfill{\scriptsize \href{http://davidstutz.de/projects/cmsimple/}{davidstutz.de/projects/cmsimple/}}\\
 		\vskip 4px
 		Kohana Red, Green, Blue, Yellow and Gaps\\
