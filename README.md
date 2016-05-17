@@ -4,9 +4,7 @@ This repository holds the LaTeX templates of my personal curriculum vitae as ava
 
 **Note:** You may use this as a template for your own curriculum vitae, however, any personal details including profile, education, teaching, work experience, research experience, service, interests, coursework and projects have to be removed or replaced.
 
-## Two-Column Template
-
-The two-column templates is inspired by the design of my personal webpage: [http://davidstutz.de/](http://davidstutz.de/). The Wordpress template of my webpage can also be found on GitHub: [https://github.com/davidstutz/wordpress-iamdavidstutz](https://github.com/davidstutz/wordpress-iamdavidstutz).
+The template is inspired by the design of my personal webpage: [http://davidstutz.de/](http://davidstutz.de/). The Wordpress template of my webpage can also be found on GitHub: [https://github.com/davidstutz/wordpress-iamdavidstutz](https://github.com/davidstutz/wordpress-iamdavidstutz).
 
 ![Two-column template.](two-column.png?raw=true "Two-column template")
 

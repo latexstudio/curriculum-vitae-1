@@ -6,6 +6,9 @@
 \usepackage{xparse}
 
 \usepackage[utf8]{inputenc}
+\inputencoding{utf8}
+\usepackage[official]{eurosym}
+
 \usepackage[
 	top=0.75cm,
 	bottom=0.75cm,
@@ -21,11 +24,22 @@
 	\noindent\fbox{
 		\begin{minipage}[t]{0.425\textwidth}
 			\vspace{2px}
-			{\huge I AM} {\footnotesize OPENSOURCE FAN}\\[2px]
+			\begin{minipage}[t]{0.21\textwidth}
+				{\Huge I AM}
+			\end{minipage}
+			\hskip -0.25em
+			\begin{minipage}[t]{0.79\textwidth}
+				\vskip -1.9em
+				{
+				\begin{tabular}{l}
+					RWTH STUDENT {\footnotesize AND}\\ GEORGIA TECH ALUMNI
+				\end{tabular}
+				}
+			\end{minipage}\\[2px]
 			{STUDYING COMPUTER SCIENCE} {\footnotesize AND MATH}\\[5px]
 			{\Huge DAVID STUTZ}\\[2px]
-			{RWTH STUDENT} {\footnotesize AND} {GEORGIA TECH ALUMNI}\\[2px]
-			{COMPUTER VISION} {RESEARCH SCIENTIST}%\\[2px]
+			{COMPUTER VISION RESEARCH SCIENTIST}
+			%{COMPUTER VISION} {RESEARCH SCIENTIST}%\\[2px]
 			%{WEB DEVELOPER}
 			\vspace{2px}
 		\end{minipage}
@@ -47,7 +61,7 @@
 		\vskip 4px
 		\href{http://davidstutz.de}{davidstutz.de}\\
 		\href{https://github.com/davidstutz}{github.com/davidstutz}\\
-		\href{https://www.xing.com/profile/David_Stutz5}{xing.to/DavidStutz}\\
+		%\href{https://www.xing.com/profile/David_Stutz5}{xing.to/DavidStutz}\\
 		\href{https://www.linkedin.com/in/davidstutz92}{de.linkedin.com/in/davidstutz92}
 	\end{minipage}
 	\vskip 6px
@@ -59,7 +73,7 @@
 		\end{minipage}
 	}
 	\vskip 10px
-	\noindent\begin{minipage}[t]{0.475\textwidth}
+	\noindent\begin{minipage}[t]{0.435\textwidth}
 		\noindent{\LARGE EDUCATION}\\[6px]
 		RWTH Aachen University\\
 		M.Sc. in Computer Science (expected 2017, GPA: 1.0)\\
@@ -80,22 +94,26 @@
 		
 		{\LARGE AWARDS}\\[6px]
 		Accenture Future Technology Leaders {\scriptsize 2015 -- today}\\
+		{\footnotesize Development program including workshops, networking events and individual mentoring awarded to excellent STEM students.}\\
 		Hans Hermann-Voss Scholarship {\scriptsize 2015}\\
+		{\footnotesize Study abroad scholarship worth \euro{1800} awarded for excellent grades.}\\
 		Germany Scholarship {\scriptsize 2014 -- today}\\
+		{\footnotesize Scholarship worth \euro{3600}/year awarded for excellent grades.}\\
 		RWTH Aachen University Dean's List {\scriptsize 2012, 2013, 2014}\\
+		{\footnotesize Awarded to the top 5\% in each discipline.}\\
 		% Selection Seminar of the German National Academic Foundation {\scriptsize 2013}\\
-		careerloft.de Scholarship {\scriptsize 2012 -- today}\\
-		e-fellows.net Scholarship {\scriptsize 2011 -- today}\\
-		German Physical Society Book Price {\scriptsize 2011}\\
-		German Junior Academy {\scriptsize  2005}
+		careerloft.de Online Scholarship {\scriptsize 2012 -- today}\\
+		e-fellows.net Online Scholarship {\scriptsize 2011 -- today}
+		%German Physical Society Book Price {\scriptsize 2011}\\
+		%German Junior Academy {\scriptsize  2005}
 		\vskip 12px
 		
 		\noindent{\LARGE PROJECTS {\footnotesize on \href{https://github.com/davidstutz}{github.com/davidstutz}}}\\[6px]
 		SEEDS Revised and Superpixels Revisited\\
 		{\footnotesize\textit{Efficient implementation of SEEDS superpixels bundled with recent superpixel algorithms including an extended version of the Berkeley Segmentation Benchmark for evaluation.}}
 		\vskip 4px
-		Efficient Graph-Based Hierarchical Video Segmentation\\
-		{\footnotesize\textit{Implementation of graph-based hierarchical image and video segmentation.}}
+		Graph-Based Hierarchical Video Segmentation\\
+		{\footnotesize\textit{Efficient implementation of graph-based hierarchical image and video segmentation.}}
 		\vskip 4px
 		iPiano: Non-Convex and Non-Smooth Optimization\\
 		{\footnotesize\textit{Implementation of iPiano for non-convex and non-smooth optimization by combining forward-backward splitting with an inertial force.}}
@@ -108,7 +126,7 @@
 		\footnotetext{{\scriptsize Last updated: \today.}}
 	\end{minipage}
 	\hspace{0.025\textwidth}
-	\begin{minipage}[t]{0.475\textwidth}
+	\begin{minipage}[t]{0.525\textwidth}
 		\noindent{\LARGE PUBLICATIONS}\\[6px]
 		Stutz, D.: Superpixel Segmentation: An Evaluation. In: German Conference on Pattern Recognition (GCPR), 2015.
 		\vskip 12px
@@ -116,53 +134,59 @@
 		\noindent{\LARGE EXPERIENCE}\\[6px]
 		MOBIS Parts Europe N.V.\\
 		Front Camera Intern\\
-		{\footnotesize\textit{Skills: C++ (Caffe, OpenCV, Boost, CMake), Python (NumPy, Jupyter)}}\\
+		%{\footnotesize Advisor: Dr. Thomas Guthier}\\
+		%{\footnotesize\textit{Skills: C++ (Caffe, OpenCV, Boost, CMake), Python (NumPy, Jupyter)}}\\
 		\hphantom{a}\hfill{\scriptsize 04/2016 -- today, Frankfurt (a.M.), GER}
 		\vskip 4px
 		
 		Computer Vision Group, RWTH Aachen University\\
 		Student Research Assistant, Computer Vision\\
 		{\footnotesize\textit{Evaluation and comparison of state-of-the-art superpixel algorithms.}}\\
-		{\footnotesize\textit{Skills: C++ (OpenCV, Boost, CMake), MatLab, LaTeX (TikZ, PGFPlots), Mercurial}}\\
+		%{\footnotesize Advisor: Prof. Dr. Bastian Leibe}
+		%{\footnotesize\textit{Skills: C++ (OpenCV, Boost, CMake), MatLab, LaTeX (TikZ, PGFPlots), Mercurial}}\\
 		%{\footnotesize\textit{Advisor: Prof. Dr. Bastian Leibe}}\\
 		\hphantom{a}\hfill{\scriptsize 05/2015 -- 03/2016, Aachen, GER}
 		\vskip 4px
 		Fyusion Inc.\\
 		Research Scientist, Computer Vision\\
-		{\footnotesize\textit{Skills: C++ (OpenCV, Boost, CMake), MatLab, LaTeX, Git}}
+		%{\footnotesize Advisors: Dr. Stefan Holzer; Alexander Trevor, Ph.D.}\\
+		%{\footnotesize\textit{Skills: C++ (OpenCV, Boost, CMake), MatLab, LaTeX, Git}}\\
 		\hphantom{a}\hfill{\scriptsize 05/2015 -- 03/2016, San Francisco, CA}
 		\vskip 4px
-		Computational Perception Laboratory, Georgia Institute of Technology\\
+		Computational Perception Lab, Georgia Institute of Technology\\
 		Visiting Graduate Student\\
 		{\footnotesize \textit{Video segmentation using intrinsic characteristics and semantic segmentation of weakly-labeled video.}}\\
-		{\footnotesize\textit{Skills: C++ (OpenCV, Boost, CMake), MatLab, Mercurial}}\\
+		%{\footnotesize Advisor: Prof. Irfan Essa, Ph.D.}\\
+		%{\footnotesize\textit{Skills: C++ (OpenCV, Boost, CMake), MatLab, Mercurial}}\\
 		%{\footnotesize \textit{Advisor: Prof. Irfan Essa, Ph.D.}}\\
 		\hphantom{a}\hfill{\scriptsize 01/2015 -- 05/2015, Atlanta, GA}
 		\vskip 4px
 		MATHCCES, RWTH Aachen University\\
-		Tutor, {\footnotesize\textit{``Fundamentals of Mathematics II'', ``Calculus for Computer Science''}}\\
+		Tutor\\
+		{\footnotesize\textit{``Fundamentals of Mathematics II'', ``Calculus for Computer Science''}}\\
 		{\footnotesize\textit{Responsibilities include presenting exercises to a group of 30-50 students and grading weekly homework as well as final exams.}}\\
 		\hphantom{a}\hfill{\scriptsize 10/2013 -- 01/2014, 04/2014 -- 09/2014, Aachen, GER}
 		\vskip 4px
 		RS Computer\\
 		Web Developer\\
 		{\footnotesize\textit{Development of themes and plugins for CMSimple and Wordpress; and conception, development as well as maintenance of individual web applications for medium-sized companies.}}\\
-		{\footnotesize\textit{Skills: PHP (Kohana, Wordpress, xtCommerce, CMSimple), JavaScript (jQuery), SQL (MySQL), HTML/CSS (Twitter Bootstrap), Mercurial}}\\
+		%{\footnotesize\textit{Skills: PHP (Kohana, Wordpress, xtCommerce, CMSimple), JavaScript (jQuery), SQL (MySQL), HTML/CSS (Twitter Bootstrap), Mercurial}}\\
 		\hphantom{a}\hfill{\scriptsize 01/2009 -- 03/2014, 10/2014 -- 04/2015, Sinzig, GER}
 		\vskip 4px
 		%Fraunhofer Institute for Communication, Information Processing and Ergonomics\\
 		Fraunhofer FKIE\\
 		Student Employee\\
 		{\footnotesize\textit{Introduction to C++ and 3D modeling using Blender; development of an interactive web application based on PHP and JavaScript for complex database queries based on SQL; plugin development for Piwik; and data visualization using d3.js.}}\\
-		{\footnotesize\textit{Skills: C++, PHP (Kohana, Piwik), JavaScript (jQuery, d3.js), SQL (MySQL), HTML/CSS}}\\
+		%{\footnotesize\textit{Skills: C++, PHP (Kohana, Piwik), JavaScript (jQuery, d3.js), SQL (MySQL), HTML/CSS}}\\
 		%{\footnotesize\textit{Advisor: Dr. Carsten Winkelholz}}\\
 		\hphantom{a}\hfill{\scriptsize 10/2009, 05/2011 -- 07/2011, 03/2012, 08/2012 -- 09/2012, Wachtberg, GER}
+		\vskip 12px
 		
 		%\noindent{\LARGE COURSEWORK}\\[6px]
 		%Computer Vision 1 \& 2, Machine Learning, Data Mining Algorithms 1 \& 2, Statistical Techniques in Robotics, Probabilistic Graphical Models, Numerical Analysis 1 \& 2, Convex Optimization, Mathematical Image Processing 1 \& 2, Foundations of Data Science, Complexity Theory
 		%\vskip 12px
 		
-		%\noindent{\LARGE SKILLS}\\[6px]
-		%C/C++ (OpenCV), MatLab, PHP, JavaScript (jQuery, d3.js), HTML/CSS (Twitter Bootstrap), SQL, LaTeX (PGFPlots, TikZ), Git, Mercurial
+		\noindent{\LARGE SKILLS}\\[6px]
+		C/C++ (OpenCV), MatLab, PHP, JavaScript (jQuery, d3.js), HTML/CSS (Twitter Bootstrap), SQL, LaTeX (PGFPlots, TikZ), Git, Mercurial
 	\end{minipage}
 \end{document}
