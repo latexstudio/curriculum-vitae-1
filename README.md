@@ -6,7 +6,13 @@ This repository holds the LaTeX templates of my personal curriculum vitae as ava
 
 The template is inspired by the design of my personal webpage: [http://davidstutz.de/](http://davidstutz.de/). The Wordpress template of my webpage can also be found on GitHub: [https://github.com/davidstutz/wordpress-iamdavidstutz](https://github.com/davidstutz/wordpress-iamdavidstutz).
 
-![Two-column template.](two-column.png?raw=true "Two-column template")
+## English
+
+![English template.](english.png?raw=true "English template.")
+
+## German
+
+![German template.](german.png?raw=true "German template.")
 
 ## License
 
