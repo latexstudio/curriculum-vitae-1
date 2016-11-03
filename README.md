@@ -1,18 +1,23 @@
 # Curriculum Vitae: David Stutz
 
 This repository holds the LaTeX templates of my personal curriculum vitae as available on [http://davidstutz.de/author/david-stutz/](http://davidstutz.de/author/david-stutz/).
+Some older versions are also included.
 
 **Note:** You may use this as a template for your own curriculum vitae, however, any personal details including profile, education, teaching, work experience, research experience, service, interests, coursework and projects have to be removed or replaced.
 
 The template is inspired by the design of my personal webpage: [http://davidstutz.de/](http://davidstutz.de/). The Wordpress template of my webpage can also be found on GitHub: [https://github.com/davidstutz/wordpress-iamdavidstutz](https://github.com/davidstutz/wordpress-iamdavidstutz).
 
-## English
+## Examples
 
-![English template.](english.png?raw=true "English template.")
+One page templates:
 
-## German
+![English template.](english_one_page.png?raw=true "English template.")
 
-![German template.](german.png?raw=true "German template.")
+![German template.](german_one_page.png?raw=true "German template.")
+
+Old, two page template:
+
+![Alternative english template.](english_two_page.png?raw=true "Alternative english template.")
 
 ## License
 

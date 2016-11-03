@@ -1,0 +1,175 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{hanging}
+\usepackage{changepage}
+\usepackage[symbol]{footmisc}
+% \usepackage[scaled]{helvet} % Helvetica
+\usepackage[scaled]{uarial} % Arial
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is sans serif
+\usepackage[T1]{fontenc}
+\usepackage[compact]{titlesec}
+
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+\newcommand{\indentwidth}{0.08\textwidth}
+
+\usepackage[
+a4paper,
+includeheadfoot,
+top = 1.5cm,
+bottom = 1.5cm,
+left = 2.5cm,
+right = 2.5cm,
+textwidth = 13.5cm]{geometry}
+
+\begin{document}
+\thispagestyle{empty}
+
+\titleformat{\section}[block]{\normalfont\LARGE\bfseries\filcenter}{}{}{}
+\section*{David Stutz}
+
+\begin{center}
+\href{mailto:davidstutz@web.de}{davidstutz@web.de} \quad \hyperlink{davidstutz.de}{http://davidstutz.de}
+\end{center}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\section} {0pt}{2ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{1.75ex plus 1ex minus .2ex}{1.25ex plus .2ex}
+
+\section*{Profile}
+
+Inspired by the elegant and simultaneously versatile world of computer science, I am a student eager to learn more in all its different disciplines. I focus on computer vision and machine learning -- combining the depth of theory with the most interesting applications of today's world.
+
+\noindent Planning a career in academia, I am not only eager to acquiring new knowledge, but also motivated to share this knowledge with other professionals as well as future generations.
+
+\section*{Academic Training}
+
+\hangpara{\indentwidth}{1}\textbf{RWTH Aachen University}, Aachen, Germany, 2011 -- present
+
+\hangpara{\indentwidth}{1}Master of Science in Computer Science, expected September 2016\\
+	Relevant Courses: Mathematical Image Processing, Convex Optimization, Data Mining Algorithms~2
+
+\hangpara{\indentwidth}{1}Bachelor of Science in Computer Science, with Distinction (4.0 GPA), October 2014\\
+Advisor: Prof. Dr. Bastian Leibe\\
+Thesis: \textit{Superpixel Segmentation using Depth Information}\footnotemark[1]\\
+Relevant Courses: Machine Learning, Computer Vision 1 \& 2, Data Mining Algorithms, Numerical Analysis 1 \& 2
+\vskip 6px
+
+\hangpara{\indentwidth}{1}\textbf{Georgia Institute of Technology}, Atlanta, GA, January 2015 -- May 2015
+
+\hangpara{\indentwidth}{1}Graduate Exchange in Computer Science  (4.0 GPA, Hans Hermann-Voss Scholarship)\\
+Relevant Courses: Statistical Techniques in Robotics, Probabilistic Graphical Models
+\vskip 6px
+
+\hangpara{\indentwidth}{1}\textbf{Gymnasium Calvarienberg}, Ahrweiler, Germany, 2002 -- 2011\\
+Abitur (Very Good, A)\\
+Majors: Physics, Mathematics, English, Geography
+
+\subsection*{Awards and Scholarships}
+
+\hangpara{\indentwidth}{1}Hans Hermann-Voss Scholarship, 2015
+
+\hangpara{\indentwidth}{1}RWTH Aachen University Education Fund (Germany Scholarship), 2014 -- present
+
+\hangpara{\indentwidth}{1}RWTH Aachen University Dean's List, 2012, 2013, 2014
+
+% \hangpara{\indentwidth}{1}RWTH Aachen University Dean's List, 2013
+
+\hangpara{\indentwidth}{1}Participation in the Selection Seminar of the German National Academic Foundation, 2013
+
+% \hangpara{\indentwidth}{1}RWTH Aachen University Dean's List, 2012
+
+\hangpara{\indentwidth}{1}careerloft.de Scholarship, October 2012 -- present
+
+\hangpara{\indentwidth}{1}e-fellows.net Scholarship, May 2011 -- present
+
+\hangpara{\indentwidth}{1}German Physical Society Book Prize for Outstanding Merits in Physics, 2011
+
+\hangpara{\indentwidth}{1}German Junior Academy for the Promotion of Young Talents, 2005
+
+\section*{Research Experience}
+
+\hangpara{\indentwidth}{1}Student Research Assistant, Computer Vision Group, RWTH Aachen University, Aachen, Germany, May 2015 -- present\\[3px]
+Advisor: Prof. Dr. Bastian Leibe\\
+\textit{Superpixel segmentation using depth information including a through comparison of state-of-the-art superpixel algorithms.}
+\vskip 6px
+
+\hangpara{\indentwidth}{1}Visiting Graduate Student, Computational Perception Laboratory, Georgia Institute of Technology, Atlanta, GA, January 2015 -- May 2015\\[3px]
+Advisor: Prof. Irfan Essa, Ph.D.\\
+\textit{Video segmentation using intrinsic characteristics.}
+
+\section*{Teaching Experience}
+
+\hangpara{\indentwidth}{1}Tutor, ``Fundamentals of Mathematics II'', MATHCCES, RWTH Aachen University, Aachen, Germany, April 2014 -- September 2014\\[3px]
+\textit{Responsibilities include presenting exercises to a group of 30 students and grading weekly homework.}
+\vskip 6px
+
+\hangpara{\indentwidth}{1}Tutor, ``Calculus for Students of Computer Science'', MATHCCES, RWTH Aachen University, Aachen, Germany, October 2013 -- March 2014\\[3px]
+\textit{Responsibilities include presenting exercises to a group of  50 students and grading weekly homework as well as the final exam.}
+\vskip 6px
+
+% "Fit für die Lehre in der Mathematik":
+% \hangpara{\indentwidth}{1}Seminar on Teaching Mathematics, RWTH Aachen University, Germany, October 2013
+
+\section*{Work Experience}
+
+\hangpara{\indentwidth}{1}Web Developer, RS Computer, Sinzig, Germany, January 2009 -- March 2014, October 2014 -- April 2015\\[3px]
+\textit{Development of a Content Management System including theme and plugin development for Wordpress, CMSimple and xtCommerce. Design, development and maintenance of individual software for medium-sized companies.}
+\vskip 6px
+
+\hangpara{\indentwidth}{1}Student Employee, Fraunhofer Institute for Communication, Information Processing and Ergonomics, Wachtberg, Germany\\[3px]
+Advisor: Dr. Carsten Winkelholz\\[3px]
+August 2012 -- September 2012\\
+\textit{Data visualization using JavaScript and d3.js.}\\[3px]
+March 2012\\
+\textit{Plugin development for Piwik (Open Source Web Analytics).}\\[3px]
+May 2011 -- July 2011\\
+\textit{Web development using PHP and Javascript based on a HMVC framework including a database connection to a MySQL database.}\\[3px]
+October 2009 (Intern)\\
+\textit{Introduction to C++ and 3D modeling using Blender.}
+
+\section*{Service and Memberships}
+
+\hangpara{\indentwidth}{1}Student Member, German Informatics Society, Germany, 2014 -- present
+
+\hangpara{\indentwidth}{1}Volunteer, Conference on Software Engineering, Aachen, Germany, 2013
+
+\hangpara{\indentwidth}{1}Member, Society of Friends of the Saarland Mandolin Orchestras, Germany, 2013 -- present
+
+\hangpara{\indentwidth}{1}Member, Saarland Mandolin Orchestra, Germany, 2012 -- present
+
+\hangpara{\indentwidth}{1}Member, German Plucked String Federation, Germany, 2012 -- present
+
+\hangpara{\indentwidth}{1}Guitar Teacher, Music School Steps on Stage, Sinzig, Germany, 2011
+
+\hangpara{\indentwidth}{1}Member, Saarland Mandolin Youth Orchestra, Germany, 2006 -- 2008
+
+%\section*{Skills}
+
+%Programming languages: C/C++, MatLab, PHP, JavaScript, HTML, SQL\\
+%Tools and libraries: Git, Mercurial, OpenCV, d3.js, jQuery
+
+\section*{Interests and Activities}
+
+\hangpara{\indentwidth}{1}Classical and electrical guitar with 16 years of experience including several prizes from the music competition "Jugend musiziert" for classical guitar ensemble, several guitar and mandolin seminars arranged by the German Plucked String Federation, teaching experience, and memberships in various mandolin orchestras, 1998 -- present
+\vskip 6px
+
+\hangpara{\indentwidth}{1}Web development and open source including plugins and themes for the content management systems Wordpress and CMSimple, modules for the PHP framework Kohana as well as Twitter Bootstrap and jQuery plugins\footnotemark[1], 2009 -- present
+\vskip 6px
+
+\hangpara{\indentwidth}{1}Massive Open Online Courses including courses on cryptography, game theory, social network analysis, and linear and integer programming, 2012 -- present
+\vskip 6px
+
+\begin{bottompar}
+\begin{center}
+\footnotesize{\footnotemark[1] Source code is available at \url{https://github.com/davidstutz}.}\\
+\footnotesize{Documents proving the above claims are given on request.}\\
+\end{center}
+\end{bottompar}
+
+\end{document}
