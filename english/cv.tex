@@ -1,171 +1,222 @@
 \documentclass[10pt,a4paper]{article}
 
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage{helvet}
+\usepackage[defaultsans,scale=0.95]{cantarell}
+\usepackage[T1]{fontenc}
+%\renewcommand*{\rmdefault}{\fcafamily}
+
 \usepackage[hidelinks]{hyperref}
 \usepackage{xparse}
 
-\usepackage[utf8]{inputenc}
-\inputencoding{utf8}
+\usepackage[T1]{fontenc}
 \usepackage[official]{eurosym}
 
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{darkgray}{HTML}{444444}
+\definecolor{lightgray}{HTML}{666666}
+
+% http://tex.stackexchange.com/questions/110362/how-can-i-make-footnote-text-color-match-body-text-color
+\usepackage[flushmargin,hang]{footmisc} % http://stackoverflow.com/questions/2842722/how-do-i-control-footnotes-indentation-in-latex
+\usepackage{bigfoot}
+\def\footnotelayout{\color{lightgray}}
+
+% http://tex.stackexchange.com/questions/21913/how-can-i-change-the-footnote-line-thickness-length
+\renewcommand{\footnoterule}{%
+  	\kern -3pt
+	{\color{lightgray} \hrule width 2in}
+	\kern 2.6pt
+}
+
+% http://tex.stackexchange.com/questions/121061/working-with-arial-or-helvetica-fonts
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+% http://tex.stackexchange.com/questions/100731/omit-hanging-indent-in-bibtex
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}
+  {\advance\leftmargin\labelsep}
+  {\leftmargin=0pt\itemindent=\labelwidth\advance\itemindent\labelsep}
+  {}{}
+  
 \usepackage[
-	top=0.75cm,
-	bottom=0.75cm,
-	left=0.75cm,
-	right=0.75cm,
+	top=1cm,
+	bottom=0cm,
+	left=1.25cm,
+	right=1.25cm,
 ]{geometry}
 
+% http://tex.stackexchange.com/questions/27843/level-of-boldness-changeable
+\usepackage[outline]{contour}% http://ctan.org/pkg/contour
+\contourlength{0.2pt}
+\contournumber{1}
+
+% http://tex.stackexchange.com/questions/27802/set-noindent-for-entire-file
+\setlength\parindent{0pt}
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
 \begin{document}
+{\fcafamily
 	\pagenumbering{gobble}
 	\clearpage
-
-	\vspace{-6px}
-	\noindent\fbox{
-		\begin{minipage}[t]{0.425\textwidth}
-			\vspace{2px}
-			\begin{minipage}[t]{0.21\textwidth}
-				{\Huge I AM}
-			\end{minipage}
-			\hskip -0.25em
-			\begin{minipage}[t]{0.79\textwidth}
-				\vskip -1.9em
-				{
-				\begin{tabular}{l}
-					RWTH STUDENT {\footnotesize AND}\\ GEORGIA TECH ALUMNI
-				\end{tabular}
-				}
-			\end{minipage}\\[2px]
-			{STUDYING COMPUTER SCIENCE} {\footnotesize AND MATH}\\[5px]
-			{\Huge DAVID STUTZ}\\[2px]
-			{COMPUTER VISION RESEARCH SCIENTIST}
-			%{COMPUTER VISION} {RESEARCH SCIENTIST}%\\[2px]
-			%{WEB DEVELOPER}
-			\vspace{2px}
+	\hspace{-6px}\fcolorbox{lightgray}{white}{
+	\begin{minipage}[t]{0.435\textwidth}
+		\vspace{3px}
+		\begin{minipage}[t]{0.22\textwidth}
+			\vskip -12px
+			{\Huge\color{darkgray}\textbf{I AM}}
 		\end{minipage}
-	}
-	\hspace{0.025\textwidth}
-	\begin{minipage}[t]{0.26\textwidth}
+		\hskip -0.25em
+		\begin{minipage}[t]{0.79\textwidth}
+			%\vskip -2em
+			\begin{tabular}{l}
+				{\color{lightgray}RWTH STUDENT} {\footnotesize\color{lightgray} AND}\\ {\color{lightgray}GEORGIA TECH ALUMNI}
+			\end{tabular}
+		\end{minipage}\\[2px]
+		{\color{lightgray}STUDYING COMPUTER SCIENCE} {\footnotesize\color{lightgray} AND} {\color{lightgray}MATH}\\[4px]
+		{\Huge \textbf{{DAVID} STUTZ}}\\[2px]
+		{\color{lightgray}COMPUTER VISION RESEARCH SCIENTIST}
 		\vspace{2px}
-		{\LARGE CURRENTLY}\\[6px]
-		RWTH Aachen University\\
-		M.Sc. in Computer Science
-		\vskip 4px
-		Microsoft Corporation\\
-		Software Engineering Intern
 	\end{minipage}
-	\begin{minipage}[t]{0.215\textwidth}
-		\vspace{2px}
-		{\LARGE CONTACT}\\[6px]
-		davidstutz@web.de
-		\vskip 4px
-		\href{http://davidstutz.de}{davidstutz.de}\\
-		\href{https://github.com/davidstutz}{github.com/davidstutz}\\
-		%\href{https://www.xing.com/profile/David_Stutz5}{xing.to/DavidStutz}\\
-		\href{https://www.linkedin.com/in/davidstutz92}{de.linkedin.com/in/davidstutz92}
-	\end{minipage}
-	\vskip 6px
-	\noindent\fbox{
-		\begin{minipage}{0.975\textwidth}
-			\vspace{4px}
-			I am passionate about computer science -- its versability, its origins in mathematics, its applications. Focusing on computer vision and machine learning, I combine the depth of theory with the most interesting applications of todays world.
-			\vspace{2px}
-		\end{minipage}
 	}
-	\vskip 10px
-	\noindent\begin{minipage}[t]{0.435\textwidth}
-		\noindent{\LARGE EDUCATION}\\[6px]
-		RWTH Aachen University\\
-		M.Sc. in Computer Science (expected 2017, GPA: 1.0)\\
-		B.Sc. in Computer Science (with distinction, GPA: 1.1)\\
-		%{\footnotesize \textit{Minor: Mathematics}}\\
-		{\footnotesize \textit{Specialization: Computer Vision, Machine Learning, Image Processing, Data Mining}}\\
-		{\footnotesize \textit{Thesis: Superpixel Segmentation using Depth Information.}}\\
-		{\footnotesize \textit{Advisor: Prof. Dr. Bastian Leibe}}\\
-		\hphantom{a}\hfill{\scriptsize 10/2011 -- today, Aachen, GER}
-		\vskip 4px
-		\noindent Georgia Institute of Technology\\
+	\hspace{0.015\textwidth}
+	\begin{minipage}[t]{0.525\textwidth}
+		\vspace{3px}
+		Equipped with a unique set of skills from experience in industry and academia, I want to pursue research in computer vision to make autonomous cars navigate safely through cities.
+		
+		\vskip 8px
+		{\color{darkgray}\href{mailto:davidstutz@web.de}{\texttt{davidstutz@web.de}} -- \href{http://www.davidstutz.de}{\texttt{davidstutz.de}}}
+	\end{minipage}
+	
+	\vskip 12px
+	
+	\begin{minipage}[t]{0.435\textwidth}
+		{\Large{EDUCATION}}\\[6px]
+		\textbf{RWTH Aachen University}\\
+		M.Sc., Computer Science (GPA: 1.0)\\
+		B.Sc., Computer Science (with Distinction, GPA: 1.1)\\
+		{\small\color{darkgray}\textit{Thesis: ``Superpixel Segmentation using Depth Information''\\Advisor: Prof. Dr. Bastian Leibe}}\\
+		{\footnotesize\color{lightgray} 10/2011 -- today, Aachen, GER}
+		\vskip 6px
+		
+		\textbf{Georgia Institute of Technology}\\
 		Graduate Exchange Student (GPA: 4.0)\\
-		{\footnotesize \textit{Specialization: Computer Vision, Machine Learning, Robotics}}\\
-		{\footnotesize \textit{Advisor: Prof. Irfan Essa, Ph.D.}}\\
-		\hphantom{a}\hfill{\scriptsize 01/2015 -- 05/2015, Atlanta, GA}
+		{\footnotesize\color{lightgray} 01/2015 -- 05/2015, Atlanta, GA}
+		\vskip 8px
+		
+		{\large{AWARDS}}\\[4px]
+		Accenture Future Technology Leaders {\footnotesize\color{lightgray} 2015 -- today}\\
+		Hans Hermann-Voss Scholarship {\footnotesize\color{lightgray} 2015}\\
+		Germany Scholarship {\footnotesize\color{lightgray} 2014 -- today}\\
+		RWTH Aachen University Dean's List {\footnotesize\color{lightgray} 2012, 2013, 2014}\\
+		careerloft.de Online Scholarship {\footnotesize\color{lightgray} 2012 -- today}\\
+		e-fellows.net Online Scholarship {\footnotesize\color{lightgray} 2011 -- today}\\
+		German Physical Society Book Price {\footnotesize\color{lightgray} 2011}
+		%German Junior Academy {\footnotesize  2005}
+		\vskip 8px
+		
+		{\large{ONLINE COURSES}}\\[4px]
+		{\textbf{Coursera}}\\
+		{\small\color{darkgray}\textit{Digital Image and Video Processing,
+			Linear and Integer Programming,
+			Control of Mobile Robots,
+			Natural Language Processing,
+			Social Network Analysis,
+			Game Theory,
+			Cryptography,
+			Introduction to Finance
+		}}
 		\vskip 12px
 		
-		\noindent{\LARGE PUBLICATIONS}\\[6px]
-		Stutz, D.: Superpixel Segmentation: An Evaluation. GCPR, 2015.
+		{\Large{PUBLICATIONS}}\\[6px]
+		\vspace{-20px}
+		\begingroup
+		\renewcommand{\section}[2]{}%
+		\begin{thebibliography}{1}
+			\bibitem{gcpr}
+			D. Stutz.
+			\emph{Superpixel Segmentation: An Evaluation}.
+			GCPR, 2015.
+		\end{thebibliography}
+		\endgroup
+		\vskip 2px
+		
+		{\Large{PROJECTS}}\\[6px]
+		{See \href{https://www.github.com/davidstutz}{\texttt{github.com/davidstutz}} and \href{http://www.davidstutz.de}{davidstutz.de}}.
+		\vskip 6px
+		
+		Computer Vision\\
+		{\small\color{darkgray}\textit{Source code of my thesis, including several superpixel algorithms and the used benchmark; implementations of graph-based image and video segmentation and iPiano for non-convex and non-smooth optimization.}}
+		\vskip 6px
+		
+		Courses and Academia\\
+		{\small\color{darkgray}\textit{Publications, thesis, seminar papers and slides, course exercises and course projects.}}
+		\vskip 6px
+		
+		Web Development\\
+		{\small\color{darkgray}\textit{Plugins and themes for the frontend framework Twitter Bootstrap, the content management systems Wordpress and CMSimle and the MVC framework Kohana.}}
 		\vskip 12px
 		
-		{\LARGE AWARDS}\\[6px]
-		Accenture Future Technology Leaders {\scriptsize 2015 -- today}\\
-		{\footnotesize Development program including workshops, networking events and individual mentoring awarded to excellent STEM students.}\\
-		Hans Hermann-Voss Scholarship {\scriptsize 2015}\\
-		{\footnotesize Study abroad scholarship worth \euro{1800} awarded for excellent grades.}\\
-		Germany Scholarship {\scriptsize 2014 -- today}\\
-		{\footnotesize Scholarship worth \euro{3600}/year awarded for excellent grades.}\\
-		RWTH Aachen University Dean's List {\scriptsize 2012, 2013, 2014}\\
-		{\footnotesize Awarded to the top 5\% in each discipline.}\\
-		% Selection Seminar of the German National Academic Foundation {\scriptsize 2013}\\
-		careerloft.de Online Scholarship {\scriptsize 2012 -- today}\\
-		e-fellows.net Online Scholarship {\scriptsize 2011 -- today}\\
-		German Physical Society Book Price {\scriptsize 2011}\\
-		{\footnotesize Awarded for outstanding merits in school physics.}\\
-		German Junior Academy {\scriptsize  2005}\\
-		{\footnotesize Program to support young talents.}
-		\vskip 12px
+		{\Large{SKILLS}}\\[6px]
+		C++ (OpenCV, Boost), Python (OpenCV, Caffe), MatLab, LaTeX (PGFPlots, TikZ), PHP, JavaScript (jQuery, d3.js), SQL, HTML/CSS
+		%Microsoft Windows \& Office, Ubuntu, Git
 		
-		\noindent{\LARGE MOOCS}\\[6px]
-		Fundamentals of Digital Image and Video Processing, Linear and Integer Programming, Social Network Analysis, Game Theory, Cryptography, Introduction to Finance, Introduction to Operations Management
-		\vskip 12px
-		
-		\noindent{\LARGE SKILLS}\\[6px]
-		C/C++ (OpenCV), Python (OpenCV, Caffe, Numpy), MatLab, PHP, JavaScript (jQuery, d3.js), HTML/CSS (Twitter Bootstrap), SQL, LaTeX (PGFPlots, TikZ)
+		\footnotetext{\scriptsize Grades given in their original grading systems. References upon request.}
+		\footnotetext{\scriptsize Last updated: \today.}
 	\end{minipage}
 	\hspace{0.025\textwidth}
 	\begin{minipage}[t]{0.525\textwidth}
-		\noindent{\LARGE EXPERIENCE}\\[6px]
-		Microsoft Corporation\\
+		{\Large{EXPERIENCE}}\\[6px]
+		\textbf{Microsoft Ireland Research Limited}\\
 		Software Engineering Intern\\
-		\hphantom{a}\hfill{\scriptsize 07/2016 -- 09/2016, Dublin, IRL}
-		\vskip 4px
-		MOBIS Parts Europe N.V.\\
-		Front Camera Intern\\
-		{\footnotesize\textit{Development of an experimental prototype for pedestrian detection using state-of-the-art deep learning techniques.}}\\
-		\hphantom{a}\hfill{\scriptsize 04/2016 -- 06/2016, Frankfurt (a.M.), GER}
-		\vskip 4px
-		Computer Vision Group, RWTH Aachen University\\
-		Student Research Assistant, Computer Vision\\
-		{\footnotesize\textit{Evaluation and comparison of state-of-the-art superpixel algorithms.}}\\
-		\hphantom{a}\hfill{\scriptsize 05/2015 -- 03/2016, Aachen, GER}
-		\vskip 4px
-		Fyusion Inc.\\
-		Research Scientist, Computer Vision\\
-		{\footnotesize\textit{Development of prototypes and conducting of experiments in the areas of pedestrian detection, keypoint tracking, line segment tracking and statistical clustering.}}\\
-		\hphantom{a}\hfill{\scriptsize 05/2015 -- 03/2016, San Francisco, CA}
-		\vskip 4px
-		Computational Perception Lab, Georgia Institute of Technology\\
-		Visiting Graduate Student\\
-		{\footnotesize \textit{Video segmentation using intrinsic characteristics and semantic segmentation of weakly-labeled video.}}\\
-		\hphantom{a}\hfill{\scriptsize 01/2015 -- 05/2015, Atlanta, GA}
-		\vskip 4px
-		MATHCCES, RWTH Aachen University\\
-		Tutor, {\footnotesize\textit{``Fundamentals of Mathematics II'', ``Calculus for Computer Science''}}\\
-		{\footnotesize\textit{Presentation of exercises to a group of 30 to 50 students and grading weekly homework as well as final exams.}}\\
-		\hphantom{a}\hfill{\scriptsize 10/2013 -- 01/2014, 04/2014 -- 09/2014, Aachen, GER}
-		\vskip 4px
-		RS Computer\\
-		Web Developer\\
-		{\footnotesize\textit{Development of themes and plugins for CMSimple, Wordpress and xtCommerce; and design, implementation as well as maintenance of individual web applications for medium-sized companies.}}\\
-		\hphantom{a}\hfill{\scriptsize 01/2009 -- 03/2014, 10/2014 -- 04/2015, Sinzig, GER}
-		\vskip 4px
-		Fraunhofer FKIE\\
-		Student Employee\\
-		{\footnotesize\textit{Introduction to C++ and 3D modeling using Blender; development of an interactive web application based on PHP and JavaScript for complex database queries based on SQL; plugin development for Piwik; and data visualization using d3.js.}}\\
-		\hphantom{a}\hfill{\scriptsize 10/2009, 05/2011 -- 07/2011, 03/2012, 08/2012 -- 09/2012, Wachtberg, GER}
-		\vskip 12px
+		{\small\color{darkgray}\textit{In the Office Marketplace Experience Team, I worked on Centralized Deployment allowing administrators to distribute Office Add-Ins within organizations. The experience improved my software engineering and communication skills and taught me to continuously reflect and learn.}}\\
+		{\footnotesize\color{lightgray} 07/2016 -- 09/2016, Dublin, IRL}
+		\vskip 6px
 		
-		\footnotetext{{\scriptsize Grades are given in their original grading system.}}
-		\footnotetext{{\scriptsize Documents proving the above claims are given upon request.}}
-		\footnotetext{{\scriptsize Work-related specifics may have been omitted depending on contract details.}}
-		\footnotetext{{\scriptsize Last updated: \today.}}
+		\textbf{MOBIS Parts Europe N.V.}\\
+		Front Camera Intern\\
+		{\small\color{darkgray}\textit{Development of an experimental prototype to evaluate deep learning techniques for pedestrian detection. I got first-hand insights on advanced driver assistance systems, their requirements and the problems faced during development.}}\\
+		{\footnotesize\color{lightgray} 04/2016 -- 06/2016, Frankfurt am Main, GER}
+		\vskip 6px
+		
+		\textbf{Computer Vision Group, RWTH Aachen University}\\
+		Student Research Assistant\\
+		{\small\color{darkgray}\textit{Starting with the results from my bachelor thesis, published at GCPR 2015 \cite{gcpr}, I worked towards a more comprehensive comparison of recent superpixel algorithms. I improved my academic writing and presentation skills and learned to value reproducible research.}}\\
+		{\footnotesize\color{lightgray} 05/2015 -- 03/2016, Aachen, GER}
+		\vskip 6px
+		
+		\textbf{Fyusion Inc.}\\
+		Research Scientist\\
+		{\small\color{darkgray}\textit{I developed experimental prototypes tackling various computer vision problems including line segment and keypoint tracking, statistical clustering and pedestrian detection. By working from home, I learned to communicate results and problems effectively and self-organize my work.}}\\
+		{\footnotesize\color{lightgray} 05/2015 -- 03/2016, San Francisco, CA}
+		\vskip 6px
+		
+		\textbf{MATHCCES, RWTH Aachen University}\\
+		Tutor, ``Calculus'' and ``Mathematical Foundations II''\\
+		{\small\color{darkgray}\textit{Responsible for 30-50 students, I presented weekly exercises, graded homework and final exams, and acted as contact person. This experience improved my mathematical understanding as well as communication and presentation skills.}}\\
+		{\footnotesize\color{lightgray} 10/2013 -- 01/2014, 04/2014 -- 09/2014, Aachen, GER}
+		\vskip 6px
+		
+		\textbf{RS Computer GmbH \& Co. KG}\\
+		Web Developer\\
+		{\small\color{darkgray}\textit{I worked on projects including plugin and theme development for content management and e-commerce systems. Additionally, I completed several development projects for medium-sized companies. This greatly benefited my project management skills.}}\\
+		{\footnotesize\color{lightgray} 01/2009 -- 03/2014, 10/2014 -- 04/2015, 10/2016 -- today, Sinzig, GER}
+		\vskip 6px
+		
+		\textbf{Fraunhofer FKIE}\\
+		Student Employee\\
+		{\small\color{darkgray}\textit{Working on user interfaces for web analytics, including data querying and visualization, this work had major influence on my decision to pursue computer science and taught me proper programming, software engineering and foundations of databases.}}\\
+		{\footnotesize\color{lightgray} 10/2009, 05/2011 -- 07/2011, 03/2012, 08/2012 -- 09/2012, Wachtberg, GER}
+		
+		\vskip 18px
+		\begin{minipage}[b]{1\textwidth}\begin{flushright}
+		{\color{lightgray}David Stutz}\hskip 6px\fcolorbox{lightgray}{white}{\hphantom{David Stutzaaa}\vphantom{\LARGE David Stutzjgq}}\end{flushright}
+		\end{minipage}
 	\end{minipage}
+}
 \end{document}

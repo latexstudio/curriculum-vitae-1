@@ -9,15 +9,15 @@ The template is inspired by the design of my personal webpage: [http://davidstut
 
 ## Examples
 
-One page templates:
+Templates over the time:
 
 ![English template.](english_one_page.png?raw=true "English template.")
 
-![German template.](german_one_page.png?raw=true "German template.")
+![Archived English template.](english_one_page.png?raw=true "Archived English template.")
 
-Old, two page template:
+![Archived German template.](german_one_page.png?raw=true "Archived German template.")
 
-![Alternative english template.](english_two_page.png?raw=true "Alternative english template.")
+![Archived English template.](english_two_page.png?raw=true "Archived English template.")
 
 ## License
 
